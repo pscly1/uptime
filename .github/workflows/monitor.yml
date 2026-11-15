@@ -1,0 +1,53 @@
+name: monitor
+
+on:
+  schedule:
+    # 03:17 UTC daily — an off-the-hour slot so it does not queue with everyone else's cron.
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [targets.json, monitor.py]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: monitor
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Run checks
+        id: run
+        continue-on-error: true
+        run: python monitor.py
+
+      - name: Commit the result
+        run: |
+          git config user.name "pscly1"
+          git config user.email "198851220+pscly1@users.noreply.github.com"
+          if git diff --quiet -- status STATUS.md; then
+            echo "no change to record"
+            exit 0
+          fi
+          git add status STATUS.md
+          git commit -m "monitor: $(date -u +%Y-%m-%d) — $(grep -c '| down |' STATUS.md || true) down"
+          git push
+
+      - name: Fail the job if an endpoint is down
+        if: steps.run.outcome == 'failure'
+        run: |
+          echo "At least one endpoint failed; see STATUS.md"
+          exit 1

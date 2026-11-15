@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-11-15T08:24:20+00:00",
+  "results": [
+    {
+      "name": "pscly.cn",
+      "url": "https://pscly.cn",
+      "checked_at": "2026-11-15T08:24:20+00:00",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 67,
+      "detail": "HTTP 200, 2048B"
+    },
+    {
+      "name": "sub.pscly.cc",
+      "url": "https://sub.pscly.cc",
+      "checked_at": "2026-11-15T08:24:20+00:00",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 209,
+      "detail": "HTTP 200, 2048B"
+    },
+    {
+      "name": "qqhfqz1.pscly.cc",
+      "url": "https://qqhfqz1.pscly.cc",
+      "checked_at": "2026-11-15T08:24:20+00:00",
+      "ok": true,
+      "status": 200,
+      "latency_ms": 225,
+      "detail": "HTTP 200, 2048B"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "targets": [
+    { "name": "pscly.cn", "url": "https://pscly.cn", "expect": 200 },
+    { "name": "sub.pscly.cc", "url": "https://sub.pscly.cc", "expect": 200 },
+    { "name": "qqhfqz1.pscly.cc", "url": "https://qqhfqz1.pscly.cc", "expect": 200 }
+  ]
+}
