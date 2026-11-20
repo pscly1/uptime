@@ -1,31 +1,31 @@
 {
-  "checked_at": "2026-11-19T11:39:22+00:00",
+  "checked_at": "2026-11-20T11:39:34+00:00",
   "results": [
     {
       "name": "pscly.cn",
       "url": "https://pscly.cn",
-      "checked_at": "2026-11-19T11:39:20+00:00",
+      "checked_at": "2026-11-20T11:39:31+00:00",
       "ok": true,
       "status": 200,
-      "latency_ms": 1368,
+      "latency_ms": 1058,
       "detail": "HTTP 200, 2048B"
     },
     {
       "name": "sub.pscly.cc",
       "url": "https://sub.pscly.cc",
-      "checked_at": "2026-11-19T11:39:21+00:00",
+      "checked_at": "2026-11-20T11:39:32+00:00",
       "ok": true,
       "status": 200,
-      "latency_ms": 578,
+      "latency_ms": 718,
       "detail": "HTTP 200, 2048B"
     },
     {
       "name": "qqhfqz1.pscly.cc",
       "url": "https://qqhfqz1.pscly.cc",
-      "checked_at": "2026-11-19T11:39:22+00:00",
+      "checked_at": "2026-11-20T11:39:33+00:00",
       "ok": true,
       "status": 200,
-      "latency_ms": 620,
+      "latency_ms": 732,
       "detail": "HTTP 200, 2048B"
     }
   ]
